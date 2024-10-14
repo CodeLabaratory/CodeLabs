@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=2, maximum-scale=1, user-scalable=no">
   <style>
     @font-face { font-family: Poppins-SemiBold; src: url('Poppins-SemiBold.ttf'); } 
     body {
@@ -71,7 +71,7 @@
       border: 5px solid dodgerblue;
       animation: glow 1s infinite alternate;
       background-color: rgb(55,55,55);
-      width: 30%;  /* Use percentage for responsive layout */
+      width: 80%;  /* Use percentage for responsive layout */
       border-radius: 20px;
       display: inline-block;
       margin-bottom: 20px;
@@ -166,8 +166,8 @@
     video {
       border: dodgerblue 3px solid;
       width: 100%; /* Make video responsive */
-      height: 200px; /* Set height for the video */
-      
+      height: auto; /* Set height for the video */
+      object-fit: cover;
     }
 
   </style>
@@ -179,45 +179,23 @@
     <a href="courses.html">Courses</a>
     <a href="demo.html">Demo</a>
   </div>   
-  <p style="font-size: 50px; color: white; margin-bottom: 0px;">Courses:</p>
+  <div class="content">
+    <img src="images/logo.png" style="margin: 0 auto; width: 100px; margin-top: 10px;">
+  </div>
+  <p style="font-size: 50px; color: white; margin-bottom: 0px;">Book A Demo:</p>
   <p style="font-size: 15px; color: dodgerblue;">For Kids Aged 10-16</p>
-  <p class="gradient-text">Limited Time Discount!</p>
+  <p class="gradient-text">45 Minute Demo!</p>
 
   <div id="product"> 
-    <p style="font-size: 2vw; color: white;">Software Development Course:
+    <p style="font-size: 2vw; color: white;">45 Minute Demo:
     </p>
-    <p style="font-size: 1.2vw; color: dodgerblue;">• Learn How To Make Simple Apps With C#</p>
+    <p style="font-size: 1.2vw; color: dodgerblue;">• Introduction To Programming With Scratch <br>• 45 Minutes - 1 Hour</p>
+    <p style="font-size: 2vw; color: white;">What Students Learn To Make At CodeLab:
+    </p>
     <div class="video-container">
-        <video src="Videos/Software.mp4" controls></video>
+        <video src="Videos/Demo Showcase.mp4" controls></video>
       </div>
-      <a href="https://wa.me/447940800479"><button class="btn">Contact Us</button></a>
-  </div>
-  </div>
-
-  <div id="product"> 
-    <p style="font-size: 2vw; color: white;">Game Development Course:</p>
-    
-    <p style="font-size: 1.2vw; color: dodgerblue;">• Learn How To Make Simple Games With Scratch!</p>
-    <div class="video-container">
-        <video src="videos/Game.mp4" controls></video>
-      </div>
-      <a href="https://wa.me/447940800479"><button class="btn">Contact Us</button></a>
-  </div>
-
-  <div id="product"> 
-    <p style="font-size: 2vw; color: white;">Website Development Course</p>
-    <p style="font-size: 1.2vw; color: dodgerblue;">• Learn How To Make Simple Interactive Websites! (HTML, CSS & JavaScript)</p>
-    <div class="video-container">
-        <video src="videos/Website.mp4" controls></video>
-      </div>
-      <a href="https://wa.me/447940800479"><button class="btn">Contact Us</button></a>
-  </div>
-  </div>
-
-  <div id="product"> 
-    <p style="font-size: 2vw; color: white;">Python Course</p>
-    <p style="font-size: 1.2vw; color: dodgerblue;">• Learn Python Programming!</p>
-      <a href="https://wa.me/447940800479"><button class="btn">Contact Us</button></a>
+      <a href="https://wa.me/447940800479"><button class="btn">Book Now</button></a>
   </div>
   </div>
 
