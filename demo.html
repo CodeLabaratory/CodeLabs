@@ -120,7 +120,7 @@
     .gradient-text {
       font-size: 4vw;  /* Responsive font size */
       font-weight: bold;
-      background: linear-gradient(45deg, dodgerblue, rgb(129, 187, 245));
+      
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: relative;
@@ -170,6 +170,13 @@
       object-fit: cover;
     }
 
+    @media (max-width: 600px) {
+  #uh {
+    margin-top: 10px;
+    display: block;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -178,7 +185,7 @@
     <a href="home.html">Home</a>
     <a href="courses.html">Courses</a>
     <a href="demo.html">Demo</a>
-    <a href="onlinecourses.html">Video_Courses</a>
+    <a href="onlinecourses.html" id="uh">Video Courses</a>
   </div>   
   <div class="content">
     <img src="images/logo.png" style="margin: 0 auto; width: 100px; margin-top: 10px;">
