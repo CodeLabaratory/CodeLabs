@@ -1,0 +1,234 @@
+<html lang="en">
+<head>
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYNM7D886Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BYNM7D886Q');
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style>
+    @font-face { font-family: Poppins-SemiBold; src: url('Poppins-SemiBold.ttf'); } 
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0px;
+      text-align: center;
+      font-family: monospace;
+      background-color: rgb(63,63,63);
+    }
+
+    @media (max-width: 600px){
+      p{
+        font-size: 5vw;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    p {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #div {
+      border: 2px solid dodgerblue;
+      animation: glow 1s infinite alternate;
+      background-color: rgb(55,55,55);
+      border-radius: 20px;
+      width: 70%;  /* Use percentage to make it responsive */
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      margin-bottom: 0px;
+      position: sticky;
+      top: 0;
+      background-color: dodgerblue;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Responsive Product Grid */
+    #product {
+      border: 5px solid dodgerblue;
+      animation: glow 1s infinite alternate;
+      background-color: rgb(55,55,55);
+      width: 80%;  /* Use percentage for responsive layout */
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 20px;
+      margin-left: 2%;  /* Small margin for space between products */
+      vertical-align: top;
+      overflow: auto;
+      max-width: 100%;  /* Ensure max width is within limits */
+      padding: 2vw;  /* Add padding to scale with viewport */
+    }
+
+    .btn {
+      animation: fadeIn 2s ease-in-out;
+      background-color: dodgerblue;
+      color: white;
+      padding: 2vw;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.3s ease;
+      width: 90%;  /* Make button width responsive */
+      height: 20vw;
+      margin-top: 3vw;
+      font-family: monospace;
+      font-size: 2vw;  /* Scales with screen size */
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px 5px dodgerblue;
+    }
+
+    purple {
+      color: dodgerblue;
+    }
+
+    /* Contact Us Section */
+    #contactus {
+      background-color: rgb(50,50,50);
+      padding-top: 10px;
+      margin-bottom: 0;
+      border-radius: 0;
+      padding: 2vw;  /* Padding responsive to viewport */
+    }
+
+    .gradient-text {
+      font-size: 4vw;  /* Responsive font size */
+      font-weight: bold;
+      background: linear-gradient(45deg, dodgerblue, rgb(129, 187, 245));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      margin-top: 50px;
+      font-size: 30;
+      animation: rotateScale 2s infinite;
+    }
+
+    @keyframes rotateScale {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+      25% {
+        transform: rotate(15deg) scale(1.1);
+      }
+      50% {
+          transform: rotate(-15deg) scale(1.1);
+        }
+      100% {
+          transform: rotate(0deg) scale(1);
+        }
+    }
+
+    @keyframes glow {
+      from { border-color: 'dodgerblue'; }
+      to { border-color: rgb(14, 86, 158); }
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+      #product {
+        width: 45%;  /* Adjust product width for smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      #product {
+        width: 90%;  /* Full width for mobile devices */
+        margin-left: 0;
+      }
+    }
+
+    video {
+      width: 100%; /* Make video responsive */
+      height: auto; /* Set height for the video */
+      object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+  #uh {
+    margin-top: 10px;
+    display: block;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <div class="navbar" style="width: 100%;">
+    <a href="home.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="demo.html">Demo</a>
+    <a href="onlinecourses.html" id="uh">Video Courses</a>
+  </div>
+
+  <div class="content">
+    <img src="images/logo.png" style="margin: 0 auto; width: 20vw; margin-top: 10px;">
+  </div>
+
+  <div id="div" style="margin-top: 50px; padding: 50px;">
+    <img src="images/event.png" style="border-radius: 10px; width: 50vw;">
+    <p style="font-weight: bold; font-size: 3vw; margin-top: 30px; color: white;">
+      Full Day Immersive Online Programming Event For Teens & Adults:
+    </p>
+
+    <p style="font-size: 2vw; margin-top: 30px; color: white;">
+      • Learn The Basics Of Programming
+    </p>
+
+    <p style="font-size: 2vw; margin-top: 30px; color: white;">
+      • Learn How To Make Money From Programming
+    </p>
+
+    <p style="font-size: 2vw; margin-top: 30px; color: white;">
+      • Learn The Basics Of Game, Software & Website Development
+    </p>
+
+    <p style="font-size: 2vw; margin-top: 30px; color: white;">
+      • Learn The Basics Of Programming
+    </p>
+
+    <p style="font-size: 2vw; margin-top: 30px; color: white;">
+      • 5 Hours In Total
+    </p>
+
+    <p style="font-size: 2vw; margin-top: 30px; color: white;">
+      • Q&A
+    </p>
+
+    <p style="font-weight: bold; font-size: 3vw; margin-top: 30px; color: white;">
+      Sign Up:
+    </p>
+
+
+    <a href="https://wa.me/447940800479"><button class="btn">Contact Us</button></a>
+  </div>
+
+</body>
+</html>
