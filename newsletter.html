@@ -1,0 +1,308 @@
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=2, maximum-scale=1, user-scalable=no">
+  <style>
+    @font-face { font-family: Poppins-SemiBold; src: url('Poppins-SemiBold.ttf'); } 
+    body {
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+      text-align: center;
+      font-family: monospace;
+      background-color: rgb(63,63,63);
+      
+    }
+
+    @media (max-width: 600px){
+      p{
+        font-size: 5vw;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    p {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #div {
+
+      border: 2px solid dodgerblue;
+      animation: glow 1s infinite alternate;
+      padding-top: 30px;
+      margin: 0 auto;
+      background-color: rgb(55,55,55);
+      border-radius: 20px;
+      margin-bottom: 20px;
+      overflow: auto;
+      width: 90%;  /* Use percentage to make it responsive */
+      max-width: 1200px;  /* Limit the maximum width */
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      margin-bottom: 0px;
+      position: sticky;
+      top: 0;
+      background-color: dodgerblue;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Responsive Product Grid */
+    #product {
+      
+      border: 5px solid dodgerblue;
+      animation: glow 1s infinite alternate;
+      background-color: rgb(55,55,55);
+      width: 30%;  /* Use percentage for responsive layout */
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 20px;
+      margin-left: 2%;  /* Small margin for space between products */
+      vertical-align: top;
+      overflow: auto;
+      max-width: 100%;  /* Ensure max width is within limits */
+      padding: 2vw;  /* Add padding to scale with viewport */
+    }
+
+    .btn {
+      animation: fadeIn 2s ease-in-out;
+      background-color: dodgerblue;
+      color: white;
+      padding: 2vw;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.3s ease;
+      width: 90%;  /* Make button width responsive */
+      max-width: 500px;  /* Limit max width */
+      margin-top: 3vw;
+      font-family: monospace;
+      font-size: 2vw;  /* Scales with screen size */
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px 5px dodgerblue;
+    }
+
+    purple {
+      color: dodgerblue;
+    }
+
+    /* Contact Us Section */
+    #contactus {
+      background-color: rgb(50,50,50);
+      padding-top: 10px;
+      margin-bottom: 0;
+      border-radius: 0;
+      padding: 2vw;  /* Padding responsive to viewport */
+    }
+
+    .gradient-text {
+      font-size: 4vw;  /* Responsive font size */
+      font-weight: bold;
+      background: linear-gradient(45deg, dodgerblue, rgb(129, 187, 245));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      margin-top: 50px;
+      font-size: 30;
+      animation: rotateScale 2s infinite;
+    }
+
+
+@keyframes rotateScale {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(15deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(-15deg) scale(1.1);
+      }
+    100% {
+        transform: rotate(0deg) scale(1);
+      }
+  }
+
+    @keyframes glow {
+      from { border-color: 'dodgerblue'; }
+      to { border-color: rgb(14, 86, 158); }
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+      #product {
+        width: 45%;  /* Adjust product width for smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      #product {
+        width: 90%;  /* Full width for mobile devices */
+        margin-left: 0;
+      }
+    }
+
+    video {
+      border: dodgerblue 3px solid;
+      width: 100%; /* Make video responsive */
+      height: 200px; /* Set height for the video */
+      
+    }
+
+    @media (max-width: 600px) {
+  #uh {
+    margin-top: 10px;
+    display: block;
+  }
+}
+
+/* Pop-up styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: rgb(55, 55, 55);
+    border: 2px solid dodgerblue;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 15px dodgerblue;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.email-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid dodgerblue;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 1vw;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: dodgerblue;
+}
+
+
+  </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="demo.html">Demo</a>
+    <a href="onlinecourses.html" id="uh">Video Courses</a>
+  </div>   
+  <div class="content">
+    <img src="images/logo.png" style="margin: 0 auto; width: 100px; margin-top: 10px;">
+  </div>
+  <p class="gradient-text">Newsletter!</p>
+  <div id="div">
+        <p style="color: white; font-size: 1.5vw;">Subscribe for Updates!</p>
+        <p style="color: dodgerblue; font-size: 1.2vw;">Get exclusive coding tips, source codes, offers, and free resources.</p>
+        <form id="emailForm" action="https://formspree.io/f/xgvezlwp" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required class="email-input">
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+  </div>
+ 
+</body>
+        
+    
+
+
+</body>
+<script>
+    // Show the popup after 5 seconds
+    window.onload = function () {
+        setTimeout(() => {
+            document.getElementById('emailPopup').style.display = 'flex';
+        }, 5000);
+    };
+
+    function openForm() {
+        document.getElementById("contactForm").style.display = "flex";
+    }
+
+    function closeForm() {
+        document.getElementById("contactForm").style.display = "none";
+    }
+
+    // Handling form submission with AJAX
+    document.getElementById("emailForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const form = this;
+        const formData = new FormData(form);
+
+        // Send form data using fetch (AJAX)
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        })
+        .then(function(response) {
+            if (response.ok) {
+                document.getElementById("formMessage").textContent = "Thank you for subscribing!";
+                form.reset(); // Reset the form
+            } else {
+                document.getElementById("formMessage").textContent = "Oops! Something went wrong. Please try again.";
+            }
+        })
+        .catch(function(error) {
+            document.getElementById("formMessage").textContent = "There was an error, please try again.";
+        });
+        closePopup();
+    });
+    function closePopup() {
+        document.getElementById('emailPopup').style.display = 'none';
+    }
+  </script>
+
+
+</html>
