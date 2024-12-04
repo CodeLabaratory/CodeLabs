@@ -4,12 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=2, maximum-scale=1, user-scalable=no">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYNM7D886Q"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYNM7D886Q');
-
   const signUpButton = document.getElementById("btn");
 
   signUpButton.addEventListener("click", function () {
@@ -21,6 +15,12 @@
 
     console.log("Sign Up button clicked - event sent to Google Analytics");
   });
+
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BYNM7D886Q');
 </script>
   <style>
     @font-face { font-family: Poppins-SemiBold; src: url('Poppins-SemiBold.ttf'); } 
