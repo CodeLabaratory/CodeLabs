@@ -4,24 +4,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=2, maximum-scale=1, user-scalable=no">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYNM7D886Q"></script>
 <script>
-  const signUpButton = document.getElementById("btn");
+  window.onload = function () {
+    // Get all buttons with class 'btn'
+    const signUpButtons = document.querySelectorAll(".btn");
 
-  signUpButton.addEventListener("click", function () {
-    // Send event to Google Analytics
-    gtag('event', 'sign_up', {
-      event_category: 'engagement',
-      event_label: 'Sign Up Button',
+    signUpButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        // Send event to Google Analytics
+        gtag("event", "sign_up", {
+          event_category: "engagement",
+          event_label: "Sign Up Button",
+        });
+
+        console.log("Sign Up button clicked - event sent to Google Analytics");
+      });
     });
+  };
 
-    console.log("Sign Up button clicked - event sent to Google Analytics");
-  });
+  // Initialize Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-    window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYNM7D886Q');
+  gtag("config", "G-BYNM7D886Q");
 </script>
+
   <style>
     @font-face { font-family: Poppins-SemiBold; src: url('Poppins-SemiBold.ttf'); } 
     body {
