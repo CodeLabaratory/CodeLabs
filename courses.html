@@ -9,6 +9,18 @@
   gtag('js', new Date());
 
   gtag('config', 'G-BYNM7D886Q');
+
+  const signUpButton = document.getElementById("btn");
+
+  signUpButton.addEventListener("click", function () {
+    // Send event to Google Analytics
+    gtag('event', 'sign_up', {
+      event_category: 'engagement',
+      event_label: 'Sign Up Button',
+    });
+
+    console.log("Sign Up button clicked - event sent to Google Analytics");
+  });
 </script>
   <style>
     @font-face { font-family: Poppins-SemiBold; src: url('Poppins-SemiBold.ttf'); } 
