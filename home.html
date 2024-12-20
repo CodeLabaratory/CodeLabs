@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function loadHTML(file) {
+  fetch(file)
+    .then((response) => response.text())
+    .then((html) => {
+      document.body.innerHTML = html;
+    })
+    .catch((error) => console.error("Error loading HTML:", error));
+}
+
+function loadScript(file) {
+    const script = document.createElement('script'); // Create a script element
+    script.src = file; // Set the file source
+    script.type = 'text/javascript'; // Set the type (optional, default is JavaScript)
+    script.async = true; // Load asynchronously (optional)
+    document.head.appendChild(script); // Append the script to the document's head
+}
+
+// Example usage
+loadScript('script.js');
+
+// Detect screen size and load HTML
+if (window.innerWidth <= 600) {
+  loadHTML("mobile.html");
+} else {
+  loadHTML("desktop.html");
+}
+
+    function Scroll(name){
+        const section = document.getElementById(name);
+        section.scrollIntoView({ behavior: "smooth" });
+    }
+
+    const menu = document.getElementById('menu');
+
+    function OpenMenu() {
+        const menu = document.getElementById("menu");
+        console.log(menu); // Should not log `null`
+        if (menu) {
+            menu.style.display = "block";
+        } else {
+          console.error("Menu element not found!");
+        }
+    }
+</script>
+</html>
