@@ -2,7 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>CodeLab | Programming Made Easy</title>
 </head>
 <body>
     
@@ -30,9 +31,9 @@ loadScript('script.js');
 
 // Detect screen size and load HTML
 if (window.innerWidth <= 600) {
-  loadHTML("mobile.html");
+  window.location.href = "mobile.html";
 } else {
-  loadHTML("desktop.html");
+  window.location.href = "desktop.html";
 }
 
     function Scroll(name){

@@ -11,6 +11,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
+    <link rel="icon" href="images/logo.png" type="image/png">
     <title>CodeLab | Programming Made Easy</title>
     <style>
         a {
@@ -29,12 +30,18 @@
             src: url('Poppins-SemiBold.ttf');
         }
 
-        body {
+        html, body {
+            transform: scale(0.8); /* Scales down the entire page to 80% */
+            transform-origin: top left; /* Scaling starts from the top-left corner */
+            width: 125%; /* Compensates for the scaling */
+            height: 125%; /* Ensures vertical layout scaling is consistent */
+            overflow-x: hidden; /* Prevents unintended horizontal scrolling */
             font-family: Poppins-SemiBold, Arial, sans-serif;
             margin: 0;
             overflow-x: hidden; /* Prevents horizontal scrolling */
             text-align: center;
         }
+
 
         /* Navbar Styling */
         .navbar {
@@ -58,7 +65,7 @@
         }
 
         .logo img {
-            width: 75px;
+            width: 50px;
             margin-right: 10px; /* Adds space between the logo and text */
         }
 
@@ -301,7 +308,7 @@
             <li><p onclick="Scroll('top')">Home</p></li>
             <li><p onclick="Scroll('bottom')">About Us</p></li>
             <li><p onclick="Scroll('contact')">Contact Us</p></li>
-            <li><a href="Books.html">Books</a></li>
+            <li><a href="gateway.html">Books</a></li>
         </ul>
         <div>
             <button style="color: white;" onclick="Scroll('demo')">⭐Book A Demo</button>
@@ -364,9 +371,9 @@
         </div>
         <div style="width: 100%">
             <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/codelabaratory/30min" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/codelabaratory/30min" style="min-width:320px; height: 700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
         </div>
     </div>
     </section>
