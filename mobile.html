@@ -104,6 +104,10 @@
     .wave-text span:nth-child(23) { animation-delay: 2.2s; }
     .wave-text span:nth-child(24) { animation-delay: 2.3s; }
     .wave-text span:nth-child(25) { animation-delay: 2.4s; }
+    .wave-text span:nth-child(26) { animation-delay: 2.5s; }
+    .wave-text span:nth-child(27) { animation-delay: 2.6s; }
+    .wave-text span:nth-child(28) { animation-delay: 2.7s; }
+    .wave-text span:nth-child(29) { animation-delay: 2.8s; }
 
         p{
             color: #38b6ff;
@@ -317,19 +321,19 @@
 
     <section id="about">
         <div id="sect" style="background-color: dodgerblue; padding: 5px;">
-            <p style="font-family: monospace; color: white; font-size: 2em; margin-top: 30px;">Why Choose CodeLab?</p>
-            <p style="color: white; text-align: center; font-size: 1.3em;">CodeLab offers 1-1 coding lessons for kids aged 10-16, covering <imp>Scratch</imp>, <imp>Python</imp>, <imp>Web Development</imp>, and <imp>App Development</imp>. Our fun, practical curriculum builds real-world skills like problem-solving and creativity, preparing kids for a tech-driven future. Trusted by parents and loved by students, CodeLab helps unlock your child's potential.</p>
-            <img src="images/idea.png" style="width: 200px;">
+            <p style="font-family: Poppins-SemiBold; color: white; font-size: 2em; margin-top: 30px;">Why Choose CodeLab?</p>
+            <p style="color: white; text-align: center; font-size: 1.3em; font-weight: normal;">CodeLab offers 1-1 coding lessons for kids aged 10-16, covering <imp>Scratch</imp>, <imp>Python</imp>, <imp>Web Development</imp>, and <imp>App Development</imp>. Our fun, practical curriculum builds real-world skills like problem-solving and creativity, preparing kids for a tech-driven future. Trusted by parents and loved by students, CodeLab helps unlock your child's potential.</p>
+            <img src="images/Journey.png" style="width: 300px; margin-bottom: 20px; border-radius: 20px;">
         </div>
     </section>
 
     <section id="demo">
         <div class="demo"> 
             <p style="font-family: Poppins-SemiBold; color: white; font-size: 2em; margin-top: 20px;">🚀 Book A Free 1-1 Coding Class Demo</p>
-            <p style="font-family: Poppins-SemiBold; color: white; font-size: 1.5em;">✅ Personalized 1-1 Lessons</p>
-            <p style="font-family: Poppins-SemiBold; color: white; font-size: 1.5em;">✅ Flexible class schedule</p>
-            <p style="font-family: Poppins-SemiBold; color: white; font-size: 1.5em;">✅ Get access to all e-books for free!</p>
-            <p style="font-family: Poppins-SemiBold; color: white; font-size: 1.5em;">✅ For Ages 10-16</p>
+            <p style="font-family: Poppins-SemiBold; color: white; font-size: 1.2em;">✅ Personalized 1-1 Lessons</p>
+            <p style="font-family: Poppins-SemiBold; color: white; font-size: 1.2em;">✅ Flexible class schedule</p>
+            <p style="font-family: Poppins-SemiBold; color: white; font-size: 1.2em;">✅ Access e-books for free!</p>
+            <p style="font-family: Poppins-SemiBold; color: white; font-size: 1.2em;">✅ For Ages 10-16</p>
             <!-- Calendly inline widget start -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/codelabaratory/30min" style="width: 90%;height:500px; margin-bottom: 50px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
@@ -341,15 +345,16 @@
 
     <section id="contact">
         <div class="sect">
+        <img src="images/logo.png" style="width: 50px; margin-top: 20px;">
         <p>Contact Us:</p>
 
         <p style="font-size: 1.5em;">WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447940800479" style="color: #38b6ff;">+44 7940 800479</a></p>
         <p style="font-size: 1.5em">Email: codelabaratory@gmail.com</p>
     </div>
     </section>
-
+    
     <div class="footer">
-        <button class="btn" onclick="Scroll('demo')">⭐ Book A Free Demo! ⭐</button>
+        <button class="btn" onclick="GoTo('https://calendly.com/codelabaratory/30min?back=1')">⭐ Book A Free Demo! ⭐</button>
     </div>
 
 </body>
@@ -362,6 +367,10 @@
 
     function OpenMenu(){
         menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function GoTo(name){
+        window.location.href = name;
     }
 </script>
 </html>
