@@ -2,264 +2,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-
-        @font-face {
-            font-family: pop;
-            src: url('pop.ttf');
-        }
-
-        .front{
-            position: relative;
-            background-image: url("images/background.png");
-            width: 100%;
-            height: 700px;
-            background-size: cover; /* Ensures the image covers the entire div */
-            background-position: center; /* Centers the image in the div */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-            
-        }
-
-        body{
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            background: #38b4fc;
-        }
-
-        .front img{
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 170px;
-            margin: 10;
-        }
-
-
-
-        p{
-            font-family: pop;
-            color: #38b4fc;
-            font-weight: bold;
-
-        }
-
-        .outline {
-            text-shadow: 
-        1px 1px 0 #25afff,  /* Bottom-right shadow */
-        -1px 1px 0 #25afff, /* Bottom-left shadow */
-        1px -1px 0 #25afff, /* Top-right shadow */
-        -1px -1px 0 #25afff; /* Top-left shadow */
-        }
-
-        .btn{
-            background-color: #38b4fc;
-            margin-top: 15px;
-            border: white 5px solid;
-            width: 80%;
-            height: 70px;
-            border-radius: 50px;
-            font-family: pop;
-            color: white;
-            font-size: 20px;
-        }
-
-        .shadow{
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-        .buttoncontainer{
-            position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center perfectly horizontally and vertically */
-    width: 100%; /* Ensure it stays within bounds */
-    display: flex; /* Optional for aligning buttons */
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center align buttons horizontally */
-        }
-
-        
-        .card{
-            position: relative;
-            padding: 5;
-            background-color: white;
-            width: 90%;
-            border-radius: 30px;
-            margin: 20px;
-        }
-
-        .review{
-            position: relative;
-            padding: 5;
-            background-color: white;
-            width: 90%;
-            border-radius: 20px;
-            margin: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        imp{
-            color: rgb(239, 128, 1);
-            font-weight: bold;
-        }
-
-        .card h1{
-            text-align: center;
-            font-size: 1.7rem;
-            font-family: pop;
-            color: #38b4fc;
-        }
-
-        .card p{
-            
-            text-align: center;
-            font-size: 1.2rem;
-            font-family: pop;
-            /* color: #38b4fc; */
-        }
-
-        .center{
-                display: block;
-                margin: calc(50vh - 50%) auto;
-                margin-top: 0;
-                margin-bottom: 0;
-        }
-
-        .text{
-            margin-top: 50px;
-            width: 95%;
-            height: 300px;
-            border-radius: 20px;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .contact{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            width: 100%;
-            background-color: white;
-        }
-
-        .contact img{
-            margin-top: 20px;
-        }
-
-        .contact p{
-            text-align: center;
-            margin-bottom: 0;
-        }
-
-        .social img{
-            border: #38b4fc 3px solid;
-            border-radius: 100px;
-            
-            
-        }
-    </style>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>CodeLab | Programming Made Easy</title>
 </head>
 <body>
-    <div class="front">
-        <div style="display: flex; align-items: center;" class="shadow">
-            <img src="images/logo2.png" alt="">
-        </div>
-        <div>
-            <p style="text-align: center; font-size: 2rem; color: white; margin: 5px; margin-top: 20px;" class="outline">🚀 Start Of Your Child Journey Into The World Of Coding!</p>
-        </div>
-
-        <div class="buttoncontainer" style="margin-top: 30px;">
-            <button class="btn" onclick="Scroll('contacts')">🚀 Book A Free Demo!</button>
-
-            <button class="btn" style="background-color: orange;" onclick="Scroll('contacts')">📞 Contact Us</button>
-
-            <button class="btn" style="background-color: rgb(17, 182, 94);" onclick="GoTo('gateway.html')">📕 Free Books</button>
-
-            
-        </div>
-        
-    </div>
-
-    <div class="card shadow">
-        <h1>Welcome To CodeLab!</h1>
-        <p>CodeLab offers personalized 1-1 coding lessons for kids aged 10-16, covering <imp>Scratch</imp>, <imp>Python</imp>, <imp>Web Development</imp>, and <imp>App Development</imp>. Our experienced instructors focus on practical skills like problem-solving and creativity, preparing kids for a tech-driven future.</p>
-        <img src="images/idea.png" style="width: 200px;" class="center">
-
-    </div>
-
-    <p style="color: white; font-size: 2rem; text-align: center;" class="outline">⭐ Reviews From Parents & Students ⭐</p>
-
-    <div class="review shadow">
-        <img src="images/Ramya.png" style="width: 110px; border-radius: 100px; float: left; margin: 10px">
-        <div >
-            <p style="font-size: 1.5rem; margin-bottom: 0;">Ramya Bala:</p>
-            <p>Coding sessions are great, very knowledgeable, effective, patient and working well for my son 🙏🏻 thanks for the continued efforts. Highly recommend CodeLab sessions.</p>
-        </div>
-    </div>
-
-    <div class="review shadow">
-        <img src="images/user.jpg" style="width: 110px; border-radius: 100px; float: left; margin: 10px">
-        <div >
-            <p style="font-size: 1.5rem; margin-bottom: 0;">Muneerah Folashadeh:</p>
-            <p>CodeLab definitley makes programming easy! and I learned alot of great lessons about Scratch, C# & HTML</p>
-        </div>
-    </div>
-
-    <div class="review shadow">
-        <img src="images/user.jpg" style="width: 110px; border-radius: 100px; float: left; margin: 10px">
-        <div >
-            <p style="font-size: 1.5rem; margin-bottom: 0;">Sulaiman:</p>
-            <p>Your approach and method is working for current generations.</p>
-        </div>
-    </div>
-
-    <img src="images/Journey.png" class="center" style="width: 90%; border-radius: 30px;">
-
-    <p style="color: white; font-size: 1.5rem; text-align: center;" class="outline">🚀 Start Learning Today!</p>
-
-        <div class="card shadow">
-        <!-- Calendly inline widget start -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/codelabaratory/30min" style="width: 100%;height:500px; margin-bottom: 50px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-        </div>
-
-    <section id="contacts" style="width: 100%;">
-        <div class="contact">
-            <img src="images/logo.png" style="width: 75px">
-            <p style="font-size: 1.5em;">WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447498673638" style="color: #38b6ff;">+44 7498 673638</a></p>
-            <p style="font-size: 1.5em">codelabaratory@gmail.com</p>
-
-            <div class="social">
-                <a href="https://instagram.com/codelab.education"><img src="images/instagram.png" style="width: 50px; margin-right: 50px;"></a>
-                <a href="https://api.whatsapp.com/send/?phone=447498673638"><img src="images/whatsapp.png" style="width: 50px; margin-right: 50px;"></a>
-                <a href="mailto:codelabaratory@gmail.com"><img src="images/mail.png" style="width: 50px;"></a>
-            </div>
-        </div>
-    </section>
-
     
 </body>
 <script>
+    function loadHTML(file) {
+  fetch(file)
+    .then((response) => response.text())
+    .then((html) => {
+      document.body.innerHTML = html;
+    })
+    .catch((error) => console.error("Error loading HTML:", error));
+}
+
+function loadScript(file) {
+    const script = document.createElement('script'); // Create a script element
+    script.src = file; // Set the file source
+    script.type = 'text/javascript'; // Set the type (optional, default is JavaScript)
+    script.async = true; // Load asynchronously (optional)
+    document.head.appendChild(script); // Append the script to the document's head
+}
+
+// Example usage
+loadScript('script.js');
+
+// Detect screen size and load HTML
+if (window.innerWidth <= 600) {
+  window.location.href = "mobile.html";
+} else {
+  window.location.href = "desktop.html";
+}
+
     function Scroll(name){
         const section = document.getElementById(name);
         section.scrollIntoView({ behavior: "smooth" });
-    } 
-
-    function GoTo(name){
-        window.location.href = name;
     }
 
+    const menu = document.getElementById('menu');
+
+    function OpenMenu() {
+        const menu = document.getElementById("menu");
+        console.log(menu); // Should not log `null`
+        if (menu) {
+            menu.style.display = "block";
+        } else {
+          console.error("Menu element not found!");
+        }
+    }
 </script>
 </html>
