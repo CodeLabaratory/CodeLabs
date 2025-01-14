@@ -74,6 +74,7 @@
             font-family: pop;
             color: white;
             font-size: 20px;
+            transition: all 0.3s;
         }
 
         .shadow{
@@ -176,6 +177,12 @@
             
             
         }
+
+        .btn:hover{
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            
+        }
     </style>
 </head>
 <body>
@@ -187,14 +194,14 @@
             <p style="text-align: center; font-size: 2rem; color: white; margin: 5px; margin-top: 20px;" class="outline">🚀 Start Of Your Child's Journey Into The World Of Coding!</p>
         </div>
 
-        <div class="buttoncontainer" style="margin-top: 30px;">
+        <div class="buttoncontainer" style="margin-top: 100px;">
             <button class="btn" onclick="Scroll('contacts')">🚀 Book A Free Demo!</button>
 
             <button class="btn" style="background-color: orange;" onclick="Scroll('contacts')">📞 Contact Us</button>
 
             <button class="btn" style="background-color: rgb(17, 182, 94);" onclick="GoTo('gateway.html')">📕 Free Books</button>
 
-            
+            <button class="btn" style="background-color: rgb(219, 121, 230);" onclick="GoTo('https://chat.whatsapp.com/EKvJ8lOOvj295r4RBB2HA9')">🗨️ WhatsApp Community</button>
         </div>
         
     </div>
