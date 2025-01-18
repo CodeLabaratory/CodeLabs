@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @font-face {
+            font-family: pop;
+            src: url('pop.ttf');
+        }
+
+        body{
+            background-image: url("images/background.png");
+            background-size: cover; /* Ensures the image covers the entire div */
+            background-position: center; /* Centers the image in the div */
+            background-repeat: no-repeat; /* Prevents the image from repeating */ 
+            margin: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .shadow{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        green{
+            color: greenyellow;
+        }
+
+        .logo{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 170px;
+            margin: 10;
+        }
+
+        .pricing{
+            width: 80%;
+            background-color: #38b4fc;
+            border-radius: 20px;
+            margin-top: 100px;
+        }
+
+        .pricing p{
+            text-align: center;
+            font-family: pop;
+            color: white;
+            padding: 4px;
+        }
+
+        .second p{
+            color: #38b4fc;
+        }
+
+        imp{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; align-items: center; width: 100%;" class="shadow">
+            <img src="images/logo2.png" class="logo">
+    </div>
+
+
+    <div class="pricing shadow" >
+        <p>One Class Weekly:</p>
+        <p style="font-size: 7rem; margin-top: 10px; margin-bottom: 0;">£15</p>
+        <p>
+            Enjoy 1-Hour Weekly Classes, Scheduled at Your Convenience
+
+            <br>
+            <green>*PERFECT FOR BEGINNERS*</green>
+        </p>
+    </div>
+
+    <div class="pricing shadow second" style="margin-top: 50px; margin-bottom: 20px; background-color: white;">
+        <p>Two Classes Weekly:</p>
+        <p style="font-size: 7rem; margin-top: 10px; margin-bottom: 0;">£10</p>
+        <p>
+            Enjoy Two 1-Hour Weekly Classes, Scheduled at Your Convenience
+
+            <br>
+            <imp>*RECOMMENDED*</imp>
+        </p>
+    </div>
+</body>
+</html>
