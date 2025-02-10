@@ -1,275 +1,480 @@
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYNM7D886Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-BYNM7D886Q');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <title>CodeLab | Programming Made Easy</title>
+    <title>Online Coding Classes For Kids & Teens | CodeLab</title>
+    <link rel="icon" href="images/logo.png">
     <style>
-
         @font-face {
             font-family: pop;
             src: url('pop.ttf');
         }
 
-        .front{
-            position: relative;
-            background-image: url("images/background.png");
+        @font-face {
+            font-family: FFS;
+            src: url('ffs.ttf');
+        }
+
+        nav{
+            box-shadow: 2px 2px 2px 2px rgba(0,0,0.25);box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             width: 100%;
-            height: 700px;
-            background-size: cover; /* Ensures the image covers the entire div */
-            background-position: center; /* Centers the image in the div */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-            
-        }
-
-        body{
-            position: relative;
+            height: 70px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            margin: 0;
-            padding: 0;
-            background: #38b4fc;
+            margin-bottom: 0;
         }
-
-        .front img{
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 170px;
-            margin: 10;
-        }
-
-
 
         p{
             font-family: pop;
             color: #38b4fc;
-
         }
 
-        .outline {
-            text-shadow: 
-        1px 1px 0 #25afff,  /* Bottom-right shadow */
-        -1px 1px 0 #25afff, /* Bottom-left shadow */
-        1px -1px 0 #25afff, /* Top-right shadow */
-        -1px -1px 0 #25afff; /* Top-left shadow */
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
         }
 
-        .btn{
-            background-color: #38b4fc;
-            margin-top: 15px;
-            border: white 5px solid;
-            width: 80%;
-            height: 70px;
-            border-radius: 50px;
-            font-family: pop;
-            color: white;
-            font-size: 20px;
-            transition: all 0.3s;
+        body{
+            position: relative;
+            margin: 0;
+            padding: 0;
         }
 
-        .shadow{
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        .logoimg{
+            margin-left: 5px;
+            width: 55px;
         }
-
-        .buttoncontainer{
-            position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center perfectly horizontally and vertically */
-    width: 100%; /* Ensure it stays within bounds */
-    display: flex; /* Optional for aligning buttons */
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center align buttons horizontally */
-        }
-
         
-        .card{
-            position: relative;
-            padding: 5;
-            background-color: white;
-            width: 90%;
-            border-radius: 30px;
-            margin: 20px;
+        #dropdown{
+            color: rgb(31, 31, 31);
+            background-color: transparent;
+            border: transparent;
+            font-size: 2rem;
+            transition: transform 2s ease-in-out;
         }
 
-        .review{
-            position: relative;
-            padding: 5;
-            background-color: white;
-            width: 90%;
-            border-radius: 20px;
-            margin: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        @keyframes shrink{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(0);
+            }
+            100%{
+                transform: scale(1);
+            }
         }
 
-        imp{
-            color: rgb(239, 128, 1);
-            font-weight: bold;
+        .shrinkAnimation{
+            animation: shrink 1s ease forwards;
         }
 
-        .card h1{
-            text-align: center;
-            font-size: 1.7rem;
-            font-family: pop;
-            color: #38b4fc;
-        }
-
-        .card p{
-            
-            text-align: center;
-            font-size: 1.2rem;
-            font-family: pop;
-            /* color: #38b4fc; */
-        }
-
-        .center{
-                display: block;
-                margin: calc(50vh - 50%) auto;
-                margin-top: 0;
-                margin-bottom: 0;
-        }
-
-        .text{
-            margin-top: 50px;
-            width: 95%;
-            height: 300px;
-            border-radius: 20px;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .contact{
+        .container{
+            padding: 10px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            color: white;
+        }
+
+        under{
+            text-decoration: underline;
+            text-decoration-color: #38b4fc;
+            text-decoration-thickness: 3px;
+        }
+
+        .gradientbackground{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            margin: 0;
+            background-color: #d9f2ff;
             width: 100%;
-            background-color: white;
+            font-weight: 500;
+            box-shadow: 0px 60px 30px #d9f2ff; /* X offset, Y offset, Blur, Color */
         }
 
-        .contact img{
-            margin-top: 20px;
+        .formstyle{
+             display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .contact p{
+        .emailinput{
+            width: 80%;
+            height: 50px;
+            font-family: ffs;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .btn{
+            width: 80%;
+            height: 50px;
+            color: white;
+            background-color: #38b4fc;
+            border: none;
+            border-radius: 5px;
+            font-family: ffs;
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .gradientbackground p{
             text-align: center;
-            margin-bottom: 0;
+            margin-top: 0;
+            font-family: ffs;
+            color: rgb(31, 31, 31);
+            font-size: 1.3rem;
         }
 
-        .social img{
-            border: #38b4fc 3px solid;
-            border-radius: 100px;
-            
-            
+        *{
+            box-sizing: border-box;
         }
 
-        .btn:hover{
-            transform: scale(1.1);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            
+        .container p{
+            text-align: center;
+            margin-top: 0;
+            font-family: ffs;
+            color: rgb(31, 31, 31);
+            font-size: 1rem;
+            font-weight: 500;
         }
+
+        .course{
+            width: 90%;
+            height: 80%;
+            border-radius: 10px;
+            border: rgba(0, 0, 0, 0.19) 1px solid;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .course:hover{
+            background-color: #d9f2ff;
+            border: #38b4fc 2px solid;
+        }
+
+        .infos{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Adjust spacing */
+            width: 100%; /* Adjust width as needed */
+        }
+
+        .infos p{
+ /* Ensures two per row */
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Space between icon and text */
+            text-align: left; /* Ensures text starts from the same point */
+        }
+
+        .infos p img {
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+    width: 20px;
+    height: auto;
+}
+
+        .contain{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contain p{
+            width: 95%;
+        }
+
+        .circle{
+            animation: circleAnimation 2s ease infinite;
+        }
+
+        @keyframes circleAnimation {
+            0%{
+                transform: scale(1);
+            }
+
+            50%{
+                transform: scale(1.1);
+            }
+
+            100%{
+                transform: scale(1);
+            }
+        }
+
+        .carousel {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;;
+        margin: auto;
+    }
+
+    .slides {
+        display: flex;
+        width: 400%;
+        animation: slide 12s linear infinite;
+    }
+
+    .slide {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        background: transparent;
+        text-align: center;
+    }
+
+    .review-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        padding: 15px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .review-card p {
+        font-size: 16px;
+        color: #333;
+    }
+
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-25%); }
+        50% { transform: translateX(-50%); }
+        75% { transform: translateX(-75%); }
+        100% { transform: translateX(0); }
+    }
+
+    blue{
+        color: #38b4fc;
+    }
+
+    .footer {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            background: rgb(240, 240, 240);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+    /* Dropdown Menu Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 70px; /* Adjust based on your nav height */
+    right: 10px;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: pop;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+        
     </style>
 </head>
 <body>
-    <div class="front">
-        <div style="display: flex; align-items: center;" class="shadow">
-            <img src="images/logo2.png" alt="">
-        </div>
-        <div>
-            <p style="text-align: center; font-size: 2rem; color: white; margin: 5px; margin-top: 20px;" class="outline">🚀 Start Of Your Child's Journey Into The World Of Coding!</p>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" class="logoimg">
+            <p>CodeLab</p>
         </div>
 
-        <div class="buttoncontainer" style="margin-top: 100px;">
-            <button class="btn" onclick="Scroll('contacts')">🚀 Book A Free Demo!</button>
+        <button id="dropdown">☰</button>
+    </nav>
 
-            <button class="btn" style="background-color: orange;" onclick="Scroll('contacts')">📞 Contact Us</button>
+    <div id="dropdownMenu" class="dropdown-content">
+    <a href="#">Home</a>
+    <a onclick="Scroll('demo')">Demo</a>
+    <a onclick="Scroll('contact')">Contact</a>
+    <a href="pricing.html">Pricing</a>
+</div>
 
-            <button class="btn" style="background-color: rgb(17, 182, 94);" onclick="GoTo('gateway.html')">📕 Free Books</button>
+    <div class="gradientbackground" style="padding: 5; padding-top: 20px;">
+        <p>Top-rated <under>online coding classes</under> <under>empowering kids</under> to become the <under>developers of tomorrow!</under></p>
+        <p style="font-size: 1rem; font-weight: normal;">📕 Engaging online 1:1 and group lessons</p>
+        <p style="font-size: 1rem; font-weight: normal;">💻 Learn from top-rated, world class instructors</p>
+        <p style="font-size: 1rem; font-weight: normal;">🚀 Learn To Create Apps, Websites And Games!</p>
 
-            <button class="btn" style="background-color: rgb(219, 121, 230);" onclick="GoTo('https://chat.whatsapp.com/EKvJ8lOOvj295r4RBB2HA9')">🗨️ Join The CodeLab Family!</button>
+        <form id="emailForm" action="https://formspree.io/f/xgvezlwp" method="POST" style="width: 100%;" class="formstyle">
+    <input class="emailinput" type="email" name="email" placeholder="Enter your email" required class="email-input">
+    <button type="submit" class="btn">Book A Free Demo Lesson</button>
+</form>
+    </div>
 
-            <button class="btn" style="background-color: rgb(230, 126, 121);" onclick="GoTo('pricing.html')">Pricing</button>
+    <div class="container" style="padding-top: 100px;">
+        <img src="images/create.png" style="width: 300px; " class="circle">
+        <p style="font-size: 1.3rem; margin-top: 20px;">CodeLab offers personalized 1-1 coding lessons for kids aged 10-16, covering <under>Scratch, Python, Web Development, and App Development.</under> Our experienced instructors focus on practical skills like <under>problem-solving and creativity</under>, preparing kids for a tech-driven future.</p>
+    </div>
+
+    <div class="container" style="background-color: rgb(240, 240, 240);">
+        <div class="course">
+            <img src="images/background.png" style="width: 100%; height: 100px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+            <p style="text-align: center; font-family: pop; font-size: 1.4rem; margin-top: 10PX;">🚀 Coding Master: Master Coding Skills</p>
+
+                <div class="contain" style="display: flex; flex-direction: row;">
+                    <p><img src="icons/tick.png" style="width: 20; object-fit: cover; vertical-align: middle; height: 1em;">Ages 10-16</p>
+                    <p><img src="icons/tick.png" style="width: 20; object-fit: cover; vertical-align: middle; height: 1em;">60-70 Lessons</p>
+                </div>
+
+                <div class="contain" style="display: flex; flex-direction: row;">
+                    <p><img src="icons/tick.png" style="width: 20; object-fit: cover; vertical-align: middle; height: 1em;">7-8 Months</p>
+                    <p><img src="icons/tick.png" style="width: 20; object-fit: cover; vertical-align: middle; height: 1em;">1:1 Classes</p>
+                </div>
+
+                
+                <div class="contain">
+                    <p>Join Us At CodeLab for an exciting learning adventure with up to 70 coding lessons for kids and teens. Follow a structured roadmap or customize your own! 🚀</p>
+                </div>
+
+                <div class="contain">
+                    <p style="font-size: 1.5rem;">Learning Outcomes:</p>
+                </div>
+
+                <div class="contain">
+                    <p><img src="icons/tick.png" style="width: 20; object-fit: cover; vertical-align: middle; height: 1em;">Learn To Independently Build Apps, Websites And Games</p>
+                    <p><img src="icons/tick.png" style="width: 20; object-fit: cover; vertical-align: middle; height: 1em;">Mastery in all coding skills</p>
+                    <p><img src="icons/tick.png" style="width: 20; object-fit: cover; vertical-align: middle; height: 1em;">Project based learning</p>
+                    <p><img src="icons/tick.png" style="width: 20; object-fit: cover; vertical-align: middle; height: 1em;">Coding Master certificate</p>
+
+                    <button class="btn" style="margin-bottom: 20px;" onclick="Scroll('demo')">Book A Free Demo Lesson</button>
+                </div>
+                
+                
+            </div>
         </div>
+    </div>
         
-    </div>
+</div>
 
-    <div class="card shadow">
-        <h1>Welcome To CodeLab!</h1>
-        <p>CodeLab offers personalized 1-1 coding lessons for kids aged 10-16, covering <imp>Scratch</imp>, <imp>Python</imp>, <imp>Web Development</imp>, and <imp>App Development</imp>. Our experienced instructors focus on practical skills like problem-solving and creativity, preparing kids for a tech-driven future.</p>
-        <img src="images/idea.png" style="width: 200px;" class="center">
+<div class="container" style="background-color: white;">
+    <p style="font-size: 2rem; color: #38b4fc;">Learning Roadmap:</p>
+    <img src="images/Journey.png" width="100%">
+</div>
 
-    </div>
-
-    <p style="color: white; font-size: 2rem; text-align: center;" class="outline">⭐ Reviews From Parents & Students ⭐</p>
-
-    <div class="review shadow">
-        <img src="images/user.jpg" style="width: 110px; border-radius: 100px; float: left; margin: 10px">
-        <div >
-            <p style="font-size: 1.5rem; margin-bottom: 0;">Ramya Bala:</p>
-            <p>Coding sessions are great, very knowledgeable, effective, patient and working well for my son 🙏🏻 thanks for the continued efforts. Highly recommend CodeLab sessions.</p>
+<div class="container" style="background-color: rgb(240, 240, 240);">
+    <p style="font-size: 2rem; color: #38b4fc; margin-bottom: 0;">Reviews:</p>
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide">
+                <div class="review-card">
+                    <img src="images/user.jpg" style="width: 40; border-radius: 100px; border: #333 1px solid; margin-bottom: 10px;">
+                    <img src="images/stars.gif" style="width: 100; margin-bottom: 10px;">
+                    <p>"Coding sessions are great, <under>very knowledgeable, effective, patient</under> and working well for my son 🙏🏻 thanks for the continued efforts. <under>Highly recommend CodeLab sessions.</under>" - <blue>Ramya Bala (Mother Of Dev Pilai)</blue></p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="review-card">
+                    <img src="images/user.jpg" style="width: 40; border-radius: 100px; border: #333 1px solid; margin-bottom: 2px;">
+                    <img src="images/stars.gif" style="width: 100; margin-bottom: 10px;">
+                    <p>"CodeLab definitely makes programming easy! and I learned alot of <under>great lessons about Scratch, C# & HTML</under>" - <blue>Muneerah (Student)</blue></p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="review-card">
+                    <img src="images/user.jpg" style="width: 40; border-radius: 100px; border: #333 1px solid; margin-bottom: 10px;">
+                    <img src="images/stars.gif" style="width: 100; margin-bottom: 10px;">
+                    <p>"Your approach and method is working for <under>current generations.</under>" - <blue>Sulaiman (Father Of Abrar)</blue></p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="review-card">
+                    <img src="images/user.jpg" style="width: 40; border-radius: 100px; border: #333 1px solid; margin-bottom: 10px;">
+                    <img src="images/stars.gif" style="width: 100; margin-bottom: 10px;">
+                    <p>"The Classes Are <under>AMAZING & EXCITING</under>" - <blue>Abrar (Student)</blue></p>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
-    <div class="review shadow">
-        <img src="images/user.jpg" style="width: 110px; border-radius: 100px; float: left; margin: 10px">
-        <div >
-            <p style="font-size: 1.5rem; margin-bottom: 0;">Muneerah Folashadeh:</p>
-            <p>CodeLab definitely makes programming easy! and I learned alot of great lessons about Scratch, C# & HTML</p>
-        </div>
-    </div>
+<div class="container" style="background-color: white;">
+    <p style="font-size: 2rem; color: #38b4fc; margin-bottom: 0;">Why Coding?</p>
 
-    <div class="review shadow">
-        <img src="images/user.jpg" style="width: 110px; border-radius: 100px; float: left; margin: 10px">
-        <div >
-            <p style="font-size: 1.5rem; margin-bottom: 0;">Sulaiman:</p>
-            <p>Your approach and method is working for current generations.</p>
-        </div>
-    </div>
+    <p style="font-size: 1.1rem; margin-top: 20px; line-height: 1.6; text-align: justify;">Learning to code equips kids with problem-solving skills, creativity, and logical thinking—essential abilities for the digital age. Beyond just a fun activity, coding opens doors to high-paying careers, as businesses increasingly rely on websites and apps to succeed. With the rise of online companies, skilled developers are in high demand, making coding one of the most valuable and profitable skills a child can learn today.</p>
+</div>
 
-    <img src="images/Journey.png" class="center" style="width: 90%; border-radius: 30px;">
+<div class="container" style="background-color: rgb(240, 240, 240);">
+    <p style="font-size: 2rem; color: #38b4fc; margin-bottom: 30;">Student Projects:</p>
 
-    <p style="color: white; font-size: 1.5rem; text-align: center;" class="outline">🚀 Start Learning Today!</p>
+    <video src="videos/projects.mp4" style="width: 90%; border-radius: 10px; border: black 2px solid;" controls></video>
+    <button class="btn" style="margin-bottom: 20px;" onclick="Scroll('demo')">Book A Free Demo Lesson</button>
+</div>
 
-        <div class="card shadow">
-        <!-- Calendly inline widget start -->
+<section id="demo">
+    <div class="container" style="background-color: #38b4fc;">
+    <p style="font-size: 2rem; color: white; margin-bottom: 30; ">⭐ Book A Free Demo Lesson! ⭐</p>
+    <!-- Calendly inline widget start -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/codelabaratory/30min" style="width: 100%;height:500px; margin-bottom: 50px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             <!-- Calendly inline widget end -->
-        </div>
+</div>
+</section>
 
-    <section id="contacts" style="width: 100%;">
-        <div class="contact">
-            <img src="images/logo.png" style="width: 75px">
-            <p style="font-size: 1.5em;">WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447498673638" style="color: #38b6ff;">+44 7498 673638</a></p>
-            <p style="font-size: 1.5em">codelabaratory@gmail.com</p>
+<div class="container" style="background-color: rgb(240, 240, 240);">
+    <p style="font-size: 2rem; color: #38b4fc; margin-bottom: 30;">Resources & Links:</p>
+    <button class="btn" style="margin-bottom: 10px; background-color: rgb(205, 79, 74);" onclick="GoTo('gateway.html')">📕 Our Free Guides</button>
+    <button class="btn" style="margin-bottom: 10px; background-color: rgb(197, 160, 255);" onclick="GoTo('https://chat.whatsapp.com/EKvJ8lOOvj295r4RBB2HA9')">👪 Join The CodeLab Family!</button>
+    <button class="btn" style="margin-bottom: 10px; background-color: rgb(255, 207, 160);" onclick="GoTo('https://instagram.com')">📷 Follow Us On Instagram!</button>
+    <button class="btn" style="margin-bottom: 10px; background-color: #38b4fc;" onclick="GoTo('pricing.html')">Pricing</button>
+</div>
 
-            <div class="social">
-                <a href="https://instagram.com/codelab.education"><img src="images/instagram.png" style="width: 50px; margin-right: 30px;"></a>
-                <a href="https://api.whatsapp.com/send/?phone=447498673638"><img src="images/whatsapp.png" style="width: 50px; margin-right: 30px;"></a>
-                <a href="https://www.youtube.com/@CodeLabaratory"><img src="images/youtube.png" style="width: 50px; margin-right: 30px;"></a>
-                <a href="mailto:codelabaratory@gmail.com"><img src="images/mail.png" style="width: 50px;"></a>
-            </div>
-        </div>
-    </section>
+<section id="contact">
+    <div class="container">
+    <img src="images/logo.png" style="width: 70;">
+    <p style="font-size: 2rem; color: #38b4fc; margin-bottom: 30;">Contact Us:</p>
+    <p style="font-size: 1.5rem;">WhatsApp: <a href="https://api.whatsapp.com/send/?phone=447498673638" style="color: #38b6ff;">+44 7498 673638</a></p>
+    <p style="font-size: 1.5rem;">Email: <a href="mailto:school.codelab@gmail.com" style="color: #38b6ff;">school.codelab.online</a></p>
+</div>
+</section>
 
-    
+<div class="footer">
+    <button class="btn" onclick="GoTo('https://calendly.com/codelabaratory/30min')">Book A Free Demo</button>
+</div>
+
 </body>
 <script>
+    document.getElementById("dropdown").addEventListener("click", function() {
+        this.classList.toggle("shrinkAnimation")
+
+        setTimeout(() => {
+    if (this.classList.contains("shrinkAnimation")) {
+      this.innerText = "✖";
+    } else {
+      this.innerText = "☰";
+    }
+  }, 500); // Halfway point of 1s animation
+    });
+
     function Scroll(name){
         const section = document.getElementById(name);
         section.scrollIntoView({ behavior: "smooth" });
@@ -279,5 +484,53 @@
         window.location.href = name;
     }
 
+    document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    let form = this;
+    let formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { "Accept": "application/json" }
+    }).then(response => {
+        if (response.ok) {
+            window.location.href = "https://calendly.com/codelabaratory/30min";
+        } else {
+            alert("Error submitting the form. Please try again.");
+        }
+    }).catch(error => {
+        alert("Something went wrong. Please try again.");
+    });
+});
+
+document.getElementById("dropdown").addEventListener("click", function() {
+    this.classList.toggle("shrinkAnimation");
+
+    // Toggle the dropdown menu
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    dropdownMenu.classList.toggle("show");
+
+    // Change the button icon
+    setTimeout(() => {
+        if (this.classList.contains("shrinkAnimation")) {
+            this.innerText = "✖";
+        } else {
+            this.innerText = "☰";
+        }
+    }, 500); // Halfway point of 1s animation
+});
+
+// Close the dropdown if the user clicks outside of it
+window.addEventListener("click", function(event) {
+    const dropdownButton = document.getElementById("dropdown");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    if (!dropdownButton.contains(event.target)) {
+        dropdownMenu.classList.remove("show");
+        dropdownButton.innerText = "☰";
+        dropdownButton.classList.remove("shrinkAnimation");
+    }
+});
 </script>
 </html>
