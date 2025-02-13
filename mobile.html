@@ -157,15 +157,34 @@
             width: 90%;
             height: 80%;
             border-radius: 10px;
-            border: rgba(0, 0, 0, 0.19) 1px solid;
+            border: rgba(0, 0, 0, 0.19) 2px solid;
             background-color: white;
-            transition: all 0.3s ease;
+            animation: courseAnimation 2s infinite;
         }
 
         .course:hover{
             background-color: #d9f2ff;
             border: #38b4fc 2px solid;
         }
+
+        @keyframes courseAnimation {
+            0%{
+                background-color: white;
+                border: rgba(0, 0, 0, 0.19) 2px solid;   
+            }
+
+            50%{
+                background-color: #d9f2ff;
+                border: #38b4fc 2px solid;
+            }
+
+            100%{
+                background-color: white;
+                border: rgba(0, 0, 0, 0.19) 2px solid;   
+            }
+        }
+
+
 
         .infos{
             display: flex;
