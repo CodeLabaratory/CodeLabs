@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYNM7D886Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BYNM7D886Q');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>CodeLab | Programming Made Easy</title>
+    <style>
+        a {
+            text-decoration: none; /* Removes the underline */
+            
+        }
+
+        p{
+            color: #38b6ff;
+            text-align: center;
+            display: block;
+        }
+
+        @font-face {
+            font-family: Poppins-SemiBold;
+            src: url('Poppins-SemiBold.ttf');
+        }
+
+        body {
+            font-family: Poppins-SemiBold, Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+            text-align: center;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            box-sizing: border-box;
+            background-color: white;
+            padding: 15px;
+            height: 5vw; /* Adjusts based on viewport width */
+            top: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Ensures vertical alignment of all elements */
+            z-index: 2; /* Ensures navbar stays on top */
+            position: fixed;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex; /* Aligns the logo and text horizontally */
+            align-items: center; /* Vertically aligns them */
+        }
+
+        .logo img {
+            width: 75px;
+            margin-right: 10px; /* Adds space between the logo and text */
+        }
+
+        .logo a {
+            font-size: 40px;
+            font-weight: 600;
+            color: #38b6ff;
+        }
+
+        ul {
+            display: flex;
+            align-items: center; /* Vertically align list items */
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            margin-right: 50px;
+        }
+
+        li a {
+            color: #38b6ff;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        li a:hover{
+            cursor: pointer;
+        }
+
+        button {
+            
+            border: none;
+            background-color: #38b6ff;
+            width: 150px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: Poppins-SemiBold;
+            margin-right: 50px; /* Space between buttons */
+        }
+
+        button p {
+            color: white;
+        }
+
+        /* Semi-circle styling */
+        .circle {
+            background-image: url('images/background.png'); /* Path to your image */
+            background-size: cover; /* Ensures image covers the entire div */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents image from repeating */
+            width: 100%; /* Makes it span the full width */
+            height: 600px; /* Semi-circle height */
+            background-color: #38b6ff; /* Semi-circle color */
+            filter: grayscale(20%);
+            display: flex;
+            justify-content: center; /* Center text horizontally */
+            align-items: center; /* Center text vertically */
+            text-align: center; /* Ensures text aligns center */
+            color: white;
+            font-size: 75px;
+            font-weight: bold;
+            font-family: monospace;
+            
+        }
+
+        .contactus {
+            box-sizing: border-box;
+    background-image: url('images/background.png'); /* Path to your image */
+    background-size: cover; /* Ensures image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    width: 100%; /* Makes it span the full width */
+    height: 600px; /* Semi-circle height */
+    background-color: #38b6ff; /* Semi-circle color */
+    filter: grayscale(20%);
+    display: flex;
+    flex-direction: column; /* Stacks the children vertically */
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    text-align: center; /* Ensures text aligns center */
+    color: white;
+    font-size: 75px;
+    font-weight: bold;
+    font-family: monospace;
+    padding: 50px; /* Ensures some spacing around the text */
+}
+
+.contactus p {
+    font-size: 30px; /* Adjusts font size for text inside the contact section */
+    margin-top: 10px; /* Adds margin between paragraphs */
+    margin-bottom: 10px; /* Adds margin between paragraphs */
+}
+
+
+        /* Info Box Container */
+        .info-container {
+            display: flex; /* Align info boxes in a row */
+            justify-content: center; /* Center the boxes horizontally */
+            align-items: flex-start; /* Align to the top */
+            gap: 40px; /* Increased space between boxes */
+            margin-top: 80px; /* Adds space below the semi-circle */
+        }
+
+        /* Info Box Styling */
+        .info {
+            width: 300px;
+            border-radius: 30px;
+            border: #38b6ff solid 3px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center; /* Centers content vertically */
+            align-items: center; /* Centers content horizontally */
+            font-size: 25px; /* Text size */
+            color: #333;
+            transition: all 0.3s ease; /* Smooth hover effect */
+        }
+
+        .info span {
+            font-size: 80px; /* Makes the emoji big */
+            margin-bottom: 20px; /* Space between emoji and text */
+        }
+
+        /* Hover Effect */
+        .info:hover {
+            transform: scale(1.1); /* Increase size */
+            border-width: 5px; /* Increase border size */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker, larger shadow */
+        }
+
+        imp{
+            color: rgb(239, 128, 1);
+            font-weight: bold;
+        }
+
+        .btn{
+            width: 400px;
+            height: 100px;
+            border-radius: 30px;
+            border: white 5px solid;
+            background-color: #38b6ff;
+            color: white;
+            font-size: 30px;
+        }
+
+        button{
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        button:hover{
+            transform: scale(1.15); /* Increase size */
+            cursor: pointer;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker, larger shadow */
+        }
+
+
+        .wave-text {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .wave-text span {
+      display: inline-block;
+      animation: wave 1.5s infinite ease-in-out;
+    }
+
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+        @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Add delays for each letter */
+    .wave-text span:nth-child(1) { animation-delay: 0s; }
+    .wave-text span:nth-child(2) { animation-delay: 0.1s; }
+    .wave-text span:nth-child(3) { animation-delay: 0.2s; }
+    .wave-text span:nth-child(4) { animation-delay: 0.3s; }
+    .wave-text span:nth-child(5) { animation-delay: 0.4s; }
+    .wave-text span:nth-child(6) { animation-delay: 0.5s; }
+    .wave-text span:nth-child(7) { animation-delay: 0.6s; }
+    .wave-text span:nth-child(8) { animation-delay: 0.7s; }
+    .wave-text span:nth-child(9) { animation-delay: 0.8s; }
+    .wave-text span:nth-child(10) { animation-delay: 0.9s; }
+    .wave-text span:nth-child(11) { animation-delay: 1s; }
+    .wave-text span:nth-child(12) { animation-delay: 1.1s; }
+    .wave-text span:nth-child(13) { animation-delay: 1.2s; }
+    .wave-text span:nth-child(14) { animation-delay: 1.3s; }
+    .wave-text span:nth-child(15) { animation-delay: 1.4s; }
+    .wave-text span:nth-child(16) { animation-delay: 1.5s; }
+    .wave-text span:nth-child(17) { animation-delay: 1.6s; }
+    .wave-text span:nth-child(18) { animation-delay: 1.7s; }
+    .wave-text span:nth-child(19) { animation-delay: 1.8s; }
+    .wave-text span:nth-child(20) { animation-delay: 1.9s; }
+    .wave-text span:nth-child(21) { animation-delay: 2s; }
+    .wave-text span:nth-child(22) { animation-delay: 2.1s; }
+    .wave-text span:nth-child(23) { animation-delay: 2.2s; }
+    .wave-text span:nth-child(24) { animation-delay: 2.3s; }
+    .wave-text span:nth-child(25) { animation-delay: 2.4s; }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="CodeLab Logo"> <!-- Replace with your logo -->
+            <a href="#">CodeLab</a>
+        </div>
+        <ul>
+            <li><a href="home.html">Home -></a></li>
+        </ul>
+    </nav>
+
+    <p style="color: #38b6ff; margin-top: 50px; font-size: 40px;">Books:</p>
+
+    <!-- Info Box Container -->
+    <div class="info-container">
+        
+        <div class="info" style="flex-direction: column;">
+            <p>🚀 Basics Of Programming For Kids</p>
+            <img src="images/BookCover.png" style="width: 260px;">
+            <a href="books/book1.pdf"><button style="width: 200px; color: white;">📕 Read!</button></a>
+        </div>
+
+        <div class="info" style="flex-direction: column;">
+            <p>⭐ Get Your Child Into Programming</p>
+            <img src="images/BookCover2.png" style="width: 260px;">
+            <a href="books/book2.pdf"><button style="width: 200px; color: white;">📕 Read!</button></a>
+        </div>
+
+        <div class="info" style="flex-direction: column;">
+            <p>💻 Set Your Child Up For Tech Success</p>
+            <img src="images/BookCover3.png" style="width: 260px;">
+            <a href="books/book3.pdf"><button style="width: 200px; color: white;">📕 Read!</button></a>
+        </div>
+
+    </div>
+    
+</body>
+<script>
+    function Scroll(name){
+        const section = document.getElementById(name);
+        section.scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+</html>
