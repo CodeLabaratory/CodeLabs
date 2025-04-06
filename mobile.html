@@ -502,7 +502,7 @@ src="https://www.facebook.com/tr?id=1453109872239086&ev=PageView&noscript=1"
 </section>
 
 <div class="footer">
-    <button class="btn" onclick="GoTo('https://calendly.com/codelabaratory/30min')">Book A Free Demo</button>
+    <button class="btn" onclick="GoTo('/demo')">Book A Free Demo</button>
 </div>
 
 </body>
@@ -540,7 +540,7 @@ src="https://www.facebook.com/tr?id=1453109872239086&ev=PageView&noscript=1"
         headers: { "Accept": "application/json" }
     }).then(response => {
         if (response.ok) {
-            window.location.href = "https://calendly.com/codelabaratory/30min";
+            window.location.href = "/demo";
         } else {
             alert("Error submitting the form. Please try again.");
         }
