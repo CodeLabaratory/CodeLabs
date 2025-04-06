@@ -369,9 +369,59 @@ src="https://www.facebook.com/tr?id=1453109872239086&ev=PageView&noscript=1"
         <p style="font-size: 1rem; font-weight: normal;">💻 Learn from top-rated, world class instructors</p>
         <p style="font-size: 1rem; font-weight: normal;">🚀 Learn To Create Apps, Websites And Games!</p>
 
-        <form id="emailForm" action="https://formspree.io/f/xgvezlwp" method="POST" style="width: 100%;" class="formstyle">
-    <input class="emailinput" type="email" name="email" placeholder="Enter your email" required class="email-input" style="width: 90%; font-size: 1rem;">
-    <button type="submit" class="btn" style="width: 90%;">Book A Free Demo Lesson</button>
+        <form id="emailForm" action="https://formspree.io/f/xgvezlwp" method="POST" style="width: 100%;" class="formstyle" onsubmit="return handleFormSubmit(event)">
+            <input class="emailinput" type="email" name="email" id="emailInput" placeholder="Enter your email" required class="email-input" style="width: 90%; font-size: 1rem;">
+            <button type="submit" class="btn" style="width: 90%;">Book A Free Demo Lesson</button>
+        </form>
+        
+        <script>
+            function handleFormSubmit(event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                const emailInput = document.getElementById('emailInput');
+                const email = emailInput.value.trim();
+                
+                // Validate email
+                if (!isValidEmail(email)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+                
+                // Submit form data to Formspree via fetch() (AJAX)
+                fetch(event.target.action, {
+                    method: 'POST',
+                    body: new FormData(event.target),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Track Facebook Lead event
+                        fbq('track', 'Lead', {
+                            email: email,
+                            content_name: "Free Demo Lesson"
+                        });
+                        
+                        // Redirect to /demo after successful submission
+                        window.location.href = "/demo";
+                    } else {
+                        alert("Form submission failed. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    alert("An error occurred. Please try again.");
+                });
+                
+                return false;
+            }
+            
+            // Simple email validation
+            function isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+        </script>
+</form>
 </form>
     </div>
 
