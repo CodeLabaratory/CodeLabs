@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Event</title>
+</head>
+<body>
+  <h1>Submit Lead Event</h1>
+  <button id="lead-button">Submit Lead</button>
+
+  <script>
+    // Select the button
+    const leadButton = document.getElementById('lead-button');
+
+    // Add event listener to button
+    leadButton.addEventListener('click', function() {
+      // Get the current URL (event source URL)
+      const eventSourceUrl = window.location.href;
+
+      // Send POST request to server
+      fetch('http://localhost:3000/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          event_source_url: eventSourceUrl, // Send the current page URL
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
+</html>
