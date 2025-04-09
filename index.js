@@ -30,8 +30,7 @@ app.post("/lead", async (req, res) => {
       `https://graph.facebook.com/v19.0/${process.env.PIXEL_ID}/events`,
       {
         data: [event],
-        access_token: process.env.ACCESS_TOKEN, // ✅ fixed
-        test_event_code: "TEST17680"
+        access_token: process.env.ACCESS_TOKEN
       }
     );
 
