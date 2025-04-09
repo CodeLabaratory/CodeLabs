@@ -31,7 +31,6 @@ app.post("/lead", async (req, res) => {
       {
         data: [event],
         access_token: process.env.ACCESS_TOKEN, // ✅ fixed
-        test_event_code: "TEST80377", // ✅ make sure this matches your real code
       }
     );
 
