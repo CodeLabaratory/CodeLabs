@@ -555,6 +555,31 @@ src="https://www.facebook.com/tr?id=2132928737159411&ev=PageView&noscript=1"
 
     let form = this;
     let formData = new FormData(form);
+    let emails = formData.get('email'); // ✅ Get the email value from the form
+    
+    const fbp = getCookie('_fbp');
+    const fbc = getCookie('_fbc');
+
+    fetch("http://localhost:3000/lead", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: emails,
+                    fbc,
+                    fbp,
+                    event_source_url: window.location.href,
+                    client_user_agent: navigator.userAgent
+                }),
+              })
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log("Success:", data);
+                })
+                .catch((error) => {
+                  console.error("Error:", error);
+                });
 
     fetch(form.action, {
         method: form.method,
