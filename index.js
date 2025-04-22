@@ -54,6 +54,7 @@ app.post("/lead", async (req, res) => {
       {
         data: [event],
         access_token: process.env.ACCESS_TOKEN,
+        test_event_code: "TEST17497",
       }
     );
 
